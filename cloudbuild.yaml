@@ -1,0 +1,17 @@
+steps:
+- name: 'node:12'
+  entrypoint: npm
+  args: ['install']
+- name: 'node:12'
+  entrypoint: npm
+  args: ['test']
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'build']
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+  - 'build'
+  - '-t'
+  - 'gcr.io/organic-cat-385616/movie-finder:1.0'
+  - '.'
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/organic-cat-385616/movie-finder:1.0']
