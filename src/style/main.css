@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 90%;
+    margin: auto;
+}
+
+main > h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+footer{
+    background-color: #3E497A;
+    color: white;
+    padding: 15px;
+}
+
+footer > p{
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+}
