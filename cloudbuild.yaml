@@ -6,7 +6,7 @@ steps:
   entrypoint: npm
   args: ['test']
 - name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'start-dev']
+  args: ['run', 'build']
 - name: 'gcr.io/cloud-builders/docker'
   args:
   - 'build'
